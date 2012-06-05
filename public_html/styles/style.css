@@ -1,0 +1,288 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+ul, li, ol {
+  margin: 0;
+  border: 0;
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 850px;
+  min-height: 100%;
+  padding: 1em 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  font-size: 15px;
+}
+
+.banana .wrapper {
+  border: 0;
+}
+
+.wrapper * {
+  color: #333;
+}
+
+.wrapper a, a {
+  color: #00438A;
+}
+
+.wrapper a:hover, .wrapper a:active, a:hover, a:active {
+  color: #00438A;
+}
+
+.no-results .query-box {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.banana.results .header {
+  margin-left: 189px;
+}
+
+.query-box input[type=input] {
+  width: 20em;
+}
+
+.query-box input[type=submit] {
+  width: 4em;
+}
+
+.query-box input {
+  height: 2em;
+}
+
+.wrapper h1 {
+  line-height: 1em;
+  width: 10em;
+  text-align: center;
+  margin-bottom: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.wrapper h1 span { 
+  color: #888;
+}
+
+.no-results h1 {
+  font-size: 1.5em;
+  padding: .5em .4em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10em;
+}
+
+.results h1 {
+  float: right;
+  font-size: 1.1em;
+  padding: 0.5em 0.15em;
+}
+
+.results {
+  margin-bottom: 3em;
+}
+
+.mango h1 {
+  background: #fc6;
+}
+
+.banana h1 {
+  background: #ff6;
+}
+
+.banana .clusters, .banana .search-result-listings {
+  float: right;
+}
+
+.search-result-listings {
+  margin-top: 0.5em;
+}
+
+.banana .clusters {
+  width: 22%;
+  margin-right: -1px;
+  z-index: 2;
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
+.banana .clusters li a, .banana .search-result-listings {
+  border: 1px solid #999;
+}
+
+.banana .clusters li:last-child a {
+  border-bottom: 1px solid #999;
+}
+
+.banana .clusters li a {
+  list-style-type: none;
+  display: block;
+  padding: 0.5em;
+  border-bottom: 0;
+  background: #f3f3f3;
+}
+
+.banana .clusters li.current a {
+  border-right: 0;
+  background: #fff;
+}
+
+.banana .clusters li:last-child a {
+  border-bottom-width: 1px;
+}
+
+.banana .search-result-listings {
+  width: 74%;
+}
+
+.search-result-listings {
+  padding: 1em;
+}
+
+.search-result-listings li {
+  display: block;
+  padding: 1em;
+  margin: 0.5em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #f0f0f0;
+}
+
+.display-link, .snippet {
+  margin-top: 0.5em;
+}
+
+.snippet {
+  color: #333;
+}
+
+.display-link {
+  color: #777;
+}
+
+.results-pagination {
+  float: right;
+}
+
+/*
+.mango .number {
+  background: #ccc;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  width: 22px;
+  height: 22px;
+  float: left;
+  display: block;
+  text-align:center;
+  margin-right: 0.5em;
+  font-size: 0.8em;
+  line-height: 23px;
+  color: #222;
+}
+*/
+
+.mango .number {
+  color: #222;
+}
+
+.mango .number:after {
+  content: '. ';
+}
+
+.banana .number, .banana .number:after {
+  display: none;
+}
+
+.results-pagination ul, .results-pagination li {
+  display: inline;
+}
+
+.results-pagination li {
+  padding-left: 0.35em;
+}
+
+.clear {
+  clear: both;
+}
+
+.mango .cluster {
+  border: 1px solid #ccc;
+  width: 241px;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  height: 205px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+.mango .cluster.third {
+  margin-right: 0;
+}
+
+.mango .cluster h2 {
+  line-height: 1em;
+  font-size: 1em;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0.75em;
+}
+
+.mango .cluster_modal h2 {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.mango h2 span {
+  font-weight: normal;
+}
+
+.mango .cluster ul {
+  float: left;
+}
+
+.mango .cluster .more {
+  font-variant: small-caps;
+  text-align: right;
+  text-transform: lowercase;
+  margin-top: 11.5em;
+}
+
+.mango .cluster li {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+.cluster_modal {
+  display: none;
+  overflow-y: scroll;
+  background: #fff;
+  font-size: 115%; /* pump it up */
+}
+
+#simplemodal-container, .cluster_modal {
+  width: 750px;
+  height: 500px;
+}
+
+/* This is the rest of the page background */
+.simplemodal-overlay {
+  background: #000;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+}
+
