@@ -1,0 +1,49 @@
+==== Designing for cultural perceptual factors in information retrieval
+
+These systems were designed for a final project for a course in the University of Michigan School of Information, SI 531: Human Interaction in Information Retrieval
+
+==== Description
+
+This study is designed to address two research questions:
+
+  1. To what extent are cultural differences demonstrated between how Americans and Koreans perceive and interact with search system interfaces?
+
+  2. To what extent can research inform the design of search system interfaces appropriate for cultural differences?
+
+To investigate the above research questions, I designed two novel search systems, intended to support two broad classes of cultural perception (analytic and holistic), as well as make use of eye-tracking observations in Dong and Lee (2008), and incorporating the design implications offered by Faiola and MacDorman (2008) as well as Dong and Lee (2008).
+
+Both systems use the Bing search API to retrieve the top hundred results for each query. (They also support the Google Custom Search API; while Google provides up to 100 free searches daily using the API, the Bing search API is free unless exceeding six searches a second.)
+
+These results are ordered by relevance ranking, and submitted to a local Carrot2 Document Clustering Server for dynamic clustering. (Throughout the discussion of the systems, I will refer to the clusters as categories; it is worth mentioning that the clusters contain overlapping results, and should not be considered to be exclusive classifications.) Search (including clustering) takes approximately three seconds or less, and search results are cached for up to a day, so that viewing different clusters or using pagination is fast.
+
+All actions (performing search, viewing clusters and clicking on results) are recorded in a database.
+
+I named the search engines so as to not bias participants: the "Banana" search system was designed to support analytic perception, whereas the "Mango" search system was designed for holistic perception.
+
+Dong, Y., Lee, K. P. (2008). A cross-cultural comparative study of users' perceptions of a webpage: With a focus on the cognitive styles of Chinese, Koreans and Americans. International Journal of Design, 2(2), 19-30.
+
+Faiola, A., and MacDoman, K.F. (2008) The influence of holistic and analytic cognitive styles on online information design: Toward a communication theory of cultural cognitive design. Information, Communication & Society, 11(3), 348-374.
+
+==== INSTALL
+
+Requirements:
+  - PHP5
+  - php5-curl
+  - Java Runtime Environment 1.6.0 (For Carrot2 Document Clustering Server)
+  - MySQL, and a user with read-write permissions for database
+  - Apache or another web server configured to execute PHP
+
+  1. Sign up for either Google Custom Search [http://code.google.com/apis/customsearch/v1/overview.html] or Bing search [http://www.bing.com/toolbox/bingdeveloper/]
+  
+  2. Download Carrot2 Document Clustering Server [http://download.carrot2.org/head/manual/index.html#section.dcs]. I used 3.5.2, so I advise seeking out the same release. Follow the directions to start the server locally; it should run on port 8080.
+
+  3. Run the following script in MySQL to initialize the database: /scripts/init.db.sql
+
+  4. IF USE GOOGLE CUSTOM SEARCH: in /public_html/lib/library.inc.php, uncomment line #153 and comment out line #154.
+
+  5. Configure /settings.ini
+
+  6. Configure Apache so that /public_html is the document root, or create a symbolic link from the document root location to /public_html.
+
+Go to http://localhost/banana and http://localhost/mango to use the search systems.
+
